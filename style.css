@@ -1,0 +1,697 @@
+
+:root{
+    --purple:#5e1799;
+    --dark-purple:#31104d;
+    --yellow:#ffd500;
+    --white:white;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    margin:0;
+    background-color:#f8f9fa;
+}
+
+
+.logo-box {
+    width: 40px;   /* oppure la misura attuale dell'icona */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.calculator-box {
+    max-width: 500px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* ================= TOP BAR ================= */
+
+.top-bar{
+    background-color:var(--purple);
+    border-bottom:4px solid var(--yellow);
+    padding:15px 0;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.logo-box{
+    width:40px;
+    height:40px;
+    background-color:var(--yellow);
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:black;
+}
+
+.logo-text{
+    color:var(--yellow);
+    font-weight:bold;
+    font-size:24px;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:40px;
+    margin:0;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu a:hover{
+    color:var(--yellow);
+}
+
+/* ================= HERO ================= */
+
+.bg-video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-section{
+    height:100vh;
+    position:relative;
+    margin-top:74px;
+    color:white;
+    overflow:hidden;
+}
+
+.hero-section-abtus{
+    height:60vh;
+    position:relative;
+    margin-top:74px;
+    color:white;
+    overflow:hidden;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(74,20,140,0.6);
+}
+
+.overlay-abtus{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:var(--purple);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-section h1,
+.hero-section-abtus h1{
+    font-size:60px;
+    font-weight:bold;
+}
+
+.hero-section span,
+.hero-section-abtus span{
+    color:var(--yellow);
+}
+
+/* ================= ABOUT PAGE ================= */
+
+.about-header{
+    background-color:var(--purple);
+    padding:170px 20px 100px 20px;
+    border-bottom:4px solid var(--yellow);
+    text-align:center;
+}
+
+.about-header h1{
+    color:white;
+    font-size:60px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.about-header p{
+    color:#d7c8f3;
+    font-size:22px;
+    max-width:800px;
+    margin:auto;
+}
+
+.story-section{
+    padding:100px 0;
+}
+
+.story-title{
+    color:var(--purple);
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.start-line{
+    margin-left:0;
+}
+
+.story-text p{
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.story-image-box{
+    border:5px solid var(--yellow);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ================= TEAM SECTION ================= */
+
+.team-section{
+    padding-bottom:100px;
+}
+
+.title-section{
+    color:var(--purple);
+    font-weight:bold;
+}
+
+.yellow-line{
+    width:70px;
+    height:4px;
+    background-color:var(--yellow);
+    margin:15px auto;
+}
+
+.team-photo-box{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    overflow:hidden;
+    border-radius:30px;
+    border:5px solid var(--purple);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.hotspot{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    cursor:pointer;
+}
+
+.hotspot-1{
+    width:22.5%;
+    top:65%;
+    left:12.5%;
+    height:70.5%;
+}
+
+.hotspot-2{
+    width:22.5%;
+    height:70.5%;
+    top:65%;
+    left:35%;
+}
+
+.hotspot-3{
+    width:22.5%;
+    height:65.5%;
+    top:66.5%;
+    left:57.5%;
+}
+
+.hotspot-4{
+    width:25.5%;
+    height:80%;
+    top:60%;
+    left:81.5%;
+}
+
+.tooltip-box{
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    transform:translateX(-50%);
+    padding:10px 18px;
+    border-radius:10px;
+    font-weight:bold;
+    white-space:nowrap;
+    opacity:0;
+    transition:0.3s;
+}
+
+.hotspot:hover .tooltip-box{
+    opacity:1;
+}
+
+.purple-tooltip{
+    background-color:var(--purple);
+    color:var(--yellow);
+}
+
+.yellow-tooltip{
+    background-color:var(--yellow);
+    color:var(--purple);
+}
+
+.team-info{
+    text-align:center;
+    margin-top:20px;
+    color:#777;
+    font-style:italic;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-yellow{
+    background-color:var(--yellow);
+    color:black;
+    font-weight:bold;
+}
+
+.btn-yellow:hover{
+    background-color:#e6c000;
+}
+
+.btn-outline-yellow{
+    border:2px solid var(--yellow);
+    color:white;
+}
+
+.btn-outline-yellow:hover{
+    background-color:var(--yellow);
+    color:black;
+}
+
+/* ================= ACHIEVEMENTS PAGE ================= */
+
+.achievements-header{
+    background-color:var(--purple);
+    padding:170px 20px 100px 20px;
+    border-bottom:4px solid var(--yellow);
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.robots-header h1{
+    color:var(--yellow);
+    font-size:60px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.robots-header p{
+    color:var(--yellow);
+    font-size:22px;
+    max-width:800px;
+    margin:auto;
+}
+
+.achievements-header h1{
+    color:var(--yellow);
+    font-size:60px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.achievements-header p{
+    color:var(--yellow);
+    font-size:22px;
+    max-width:800px;
+    margin:auto;
+}
+
+.achievement-bg-icon{
+    position:absolute;
+    top:-70px;
+    right:-40px;
+    font-size:260px;
+    color:rgba(255,255,255,0.25);
+}
+
+.achievements-section{
+    padding:100px 0;
+}
+
+.achievement-card{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    border-top:5px solid var(--purple);
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    height:100%;
+}
+
+.achievement-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.achievement-icon{
+    width:60px;
+    height:60px;
+    background:#f5f5f5;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--yellow);
+    font-size:24px;
+}
+
+.purple-icon{
+    color:var(--purple);
+}
+
+.achievement-year{
+    background:#fff4b8;
+    color:#7a6400;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.achievement-card h3{
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:8px;
+    color:#222;
+}
+
+.achievement-card h5{
+    color:var(--purple);
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.achievement-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+.stats-section{
+    margin-top:80px;
+}
+
+.stat-box{
+    background:var(--purple);
+    border-bottom:5px solid var(--yellow);
+    border-radius:25px;
+    padding:35px 20px;
+    color:white;
+}
+
+.stat-box h2{
+    color:var(--yellow);
+    font-size:50px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#d7c8f3;
+    text-transform:uppercase;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+    margin:0;
+}
+
+/* ================= ROBOTS PAGE ================= */
+
+.robots-section{
+    padding:100px 0;
+}
+
+.robot-card{
+    position:relative;
+    overflow:hidden;
+    background:white;
+    border-radius:30px;
+    border:1px solid #ddd;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.robot-bg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    inset:0;
+}
+
+.robot-bg img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0.1;
+}
+
+.robot-content{
+    position:relative;
+    z-index:2;
+    padding:40px;
+}
+
+.robot-name{
+    color:var(--purple);
+    font-size:55px;
+    font-weight:900;
+    margin-bottom:5px;
+}
+
+.robot-year{
+    color:#c79a00;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.robot-label{
+    color:#999;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:0;
+}
+
+.robot-game{
+    color:#222;
+    font-weight:bold;
+}
+
+.robot-description{
+    color:#555;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.feature-box{
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(5px);
+    border-radius:20px;
+    padding:20px;
+    border:1px solid #eee;
+    height:100%;
+}
+
+.feature-box h5{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.feature-box p{
+    color:#666;
+    font-size:14px;
+    margin:0;
+}
+
+.feature-icon{
+    font-size:28px;
+    margin-bottom:15px;
+    display:block;
+}
+
+.yellow-icon{
+    color:var(--yellow);
+}
+
+.robot-link{
+    border:none;
+    background:none;
+    color:var(--purple);
+    font-weight:bold;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.robot-link:hover{
+    color:#3d0f66;
+}
+
+.specs-box{
+    background:var(--purple);
+    color:white;
+    padding:40px;
+    border-radius:30px;
+    border-top:8px solid var(--yellow);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.specs-box h3{
+    color:var(--yellow);
+    font-weight:bold;
+    margin-bottom:30px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.specs-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.specs-list li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.specs-list span{
+    color:#d6bfff;
+}
+
+.quote-box{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    margin-top:30px;
+}
+
+.quote-box p{
+    margin:0;
+    color:#ddd;
+    font-style:italic;
+}
+
+/* ================= FOOTER ================= */
+
+.footer-section{
+    background-color:var(--dark-purple);
+    color:white;
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:white;
+}
+
+.footer-links a:hover{
+    color:var(--yellow);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width:768px){
+
+    .hero-section h1,
+    .hero-section-abtus h1,
+    .about-header h1,
+    .achievements-header h1{
+        font-size:40px;
+    }
+
+    .about-header p,
+    .achievements-header p{
+        font-size:18px;
+    }
+
+    .menu{
+        gap:15px;
+        font-size:14px;
+    }
+
+    .logo-text{
+        font-size:18px;
+    }
+
+    .story-text p{
+        font-size:16px;
+    }
+
+    .hotspot{
+        width:70px;
+        height:100px;
+    }
+
+    .tooltip-box{
+        font-size:12px;
+        padding:8px 12px;
+    }
+
+    .achievement-card{
+        padding:25px;
+    }
+
+    .achievement-card h3{
+        font-size:24px;
+    }
+
+    .achievement-bg-icon{
+        font-size:180px;
+        top:-40px;
+    }
+
+    .stat-box h2{
+        font-size:36px;
+    }
+
+    .robot-name{
+        font-size:40px;
+    }
+
+    .robot-description{
+        font-size:17px;
+    }
+
+    .robot-content,
+    .specs-box{
+        padding:25px;
+    }
+}
+
